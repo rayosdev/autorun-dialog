@@ -1,4 +1,8 @@
-async function recursiveObserver(index, observeArray) {
+let speedModifier;
+
+async function recursiveObserver(index, observeArray, _speedModifier = 0.3) {
+    if (_speedModifier != 0.3) speedModifier = _speedModifier
+    
     if (index >= observeArray.length) {
         console.log("finished");
         return;
